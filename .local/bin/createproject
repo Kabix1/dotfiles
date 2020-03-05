@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+NAME=$1
+LANGUAGE="Python"
+VERSION=3.8.1
+
+PROJECT_PATH="$HOME/Code/Python/$NAME"
+
+mkdir "${PROJECT_PATH}"
+
+pyenv virtualenv $VERSION $NAME
+
+touch "${PROJECT_PATH}/requirements.txt"
+echo "$NAME" > "${PROJECT_PATH}/.python-version"
+cat "$HOME/.config/templates/python.py" > "${PROJECT_PATH}/main.py"
+
+cd "${PROJECT_PATH}"
+pip install -r "$HOME/.config/python_modules"

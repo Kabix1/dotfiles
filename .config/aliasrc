@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+ cp="cp -iv" \
+ mv="mv -iv" \
+ rm="rm -v" \
+ mkd="mkdir -pv" \
+ free='free -h' \
+ df='df -h' \
+ xclip='xclip -selection clipboard'
+
+# Colorize commands when possible.
+alias \
+    ls="ls -hN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+    ka="killall" \
+    trem="transmission-remote" \
+    YT="youtube-viewer" \
+    sdn="sudo shutdown -h now" \
+    xi="sudo xbps-install" \
+    xr="sudo xbps-remove -R" \
+    xq="xbps-query"
+    commit='git commit' \
+    add='git add --all' \
+    push='git push' \
+    pull='git pull' \
+    stash='git stash'
+
+
+# Some other stuff
+alias \
+    magit="nvim -c MagitOnly" \
+    ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+    weath="less -S ~/.local/share/weatherreport" \
+    info='info --vi-keys'

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+
+NAME=$(cat .python-version)
+VERSION=3.8.1
+
+if pyenv virtualenvs 2>/dev/null| grep -wq $NAME
+then
+    echo "Virtual environment $NAME already exists"
+else
+    pyenv virtualenv $VERSION $NAME
+    pip install -r $HOME/.config/python_modules
+    pip install -r requirements.txt
+fi
