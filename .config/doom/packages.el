@@ -1,51 +1,129 @@
+;; [[file:~/.config/doom/packages.org::*About this file][About this file:1]]
 ;; -*- no-byte-compile: t; -*-
-;;; $DOOMDIR/packages.el
+;;; ~/.config/doom/packages.el
+;; About this file:1 ends here
 
-;; To install a package with Doom you must declare them here, run 'doom sync' on
-;; the command line, then restart Emacs for the changes to take effect.
-;; Alternatively, use M-x doom/reload.
-;;
-;; WARNING: Disabling core packages listed in ~/.emacs.d/core/packages.el may
-;; have nasty side-effects and is not recommended.
+;; [[file:~/.config/doom/packages.org::*Dired Icons][Dired Icons:1]]
+(package! all-the-icons-dired)
+;; Dired Icons:1 ends here
 
+;; [[file:~/.config/doom/packages.org::*Wakatime][Wakatime:1]]
+(package! wakatime-mode)
+;; Wakatime:1 ends here
 
-;; All of Doom's packages are pinned to a specific commit, and updated from
-;; release to release. To un-pin all packages and live on the edge, do:
-;(unpin! t)
+;; [[file:~/.config/doom/packages.org::*Git Annex][Git Annex:1]]
+(package! magit-annex)
+(package! git-annex)
+;; Git Annex:1 ends here
 
-;; ...but to unpin a single package:
-;(unpin! pinned-package)
-;; Use it to unpin multiple packages
-;(unpin! pinned-package another-pinned-package)
+;; [[file:~/.config/doom/packages.org::*LATER Key Chords and Keybindings][LATER Key Chords and Keybindings:1]]
+(package! general)
+;; LATER Key Chords and Keybindings:1 ends here
 
+;; [[file:~/.config/doom/packages.org::*Org Download][Org Download:1]]
+(package! org-download)
+;; Org Download:1 ends here
 
-;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
-;(package! some-package)
+;; [[file:~/.config/doom/packages.org::*Org Noter][Org Noter:1]]
+(package! org-noter)
+;; Org Noter:1 ends here
 
-;; To install a package directly from a particular repo, you'll need to specify
-;; a `:recipe'. You'll find documentation on what `:recipe' accepts here:
-;; https://github.com/raxod502/straight.el#the-recipe-format
-;(package! another-package
-;  :recipe (:host github :repo "username/repo"))
+;; [[file:~/.config/doom/packages.org::*Org Ref][Org Ref:1]]
+(package! org-ref)
+;; Org Ref:1 ends here
 
-;; If the package you are trying to install does not contain a PACKAGENAME.el
-;; file, or is located in a subdirectory of the repo, you'll need to specify
-;; `:files' in the `:recipe':
-;(package! this-package
-;  :recipe (:host github :repo "username/repo"
-;           :files ("some-file.el" "src/lisp/*.el")))
+;; [[file:~/.config/doom/packages.org::*Org Mind Map][Org Mind Map:1]]
+(package! org-mind-map
+  :recipe (:host github
+            :repo "theodorewiles/org-mind-map"))
+;; Org Mind Map:1 ends here
 
-;; If you'd like to disable a package included with Doom, for whatever reason,
-;; you can do so here with the `:disable' property:
-;(package! builtin-package :disable t)
+;; [[file:~/.config/doom/packages.org::*Org Rifle][Org Rifle:1]]
+(package! helm-org-rifle)
+;; Org Rifle:1 ends here
 
-;; You can override the recipe of a built in package without having to specify
-;; all the properties for `:recipe'. These will inherit the rest of its recipe
-;; from Doom or MELPA/ELPA/Emacsmirror:
-;(package! builtin-package :recipe (:nonrecursive t))
-;(package! builtin-package-2 :recipe (:repo "myfork/package"))
+;; [[file:~/.config/doom/packages.org::*Org Gcal][Org Gcal:1]]
+(package! org-gcal)
+;; Org Gcal:1 ends here
 
-;; Specify a `:branch' to install a package from a particular branch or tag.
-;; This is required for some packages whose default branch isn't 'master' (which
-;; our package manager can't deal with; see raxod502/straight.el#279)
-;(package! builtin-package :recipe (:branch "develop"))
+;; [[file:~/.config/doom/packages.org::*Anki Mode][Anki Mode:1]]
+(package! anki-editor)
+;; Anki Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Dockerfile Mode][Dockerfile Mode:1]]
+(package! dockerfile-mode)
+;; Dockerfile Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Zotero][Zotero:1]]
+(package! zotxt)
+;; Zotero:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Tup Mode][Tup Mode:1]]
+(package! tup-mode
+:recipe (:host github
+           :repo "ejmr/tup-mode"))
+;; Tup Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*SaltStack Mode][SaltStack Mode:1]]
+(package! salt-mode
+:recipe (:host github
+         :repo "glynnforrest/salt-mode"))
+;; SaltStack Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*PKGBUILD Mode][PKGBUILD Mode:1]]
+(package! pkgbuild-mode
+  :recipe (:host github
+            :repo "juergenhoetzel/pkgbuild-mode"))
+;; PKGBUILD Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*LAMMPS Mode][LAMMPS Mode:1]]
+(package! lammps-mode
+  :recipe (:host github
+                    :repo "HaoZeke/lammps-mode"))
+;; LAMMPS Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Pug Mode][Pug Mode:1]]
+(package! pug-mode)
+;; Pug Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Nix Mode][Nix Mode:1]]
+(package! nix-mode)
+;; Nix Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*JVM Languages][JVM Languages:1]]
+; Kotlin > Java
+(package! kotlin-mode)
+; Groovy -> Testing
+(package! groovy-mode)
+;; JVM Languages:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Systemd Mode][Systemd Mode:1]]
+(package! systemd)
+;; Systemd Mode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Polymode][Polymode:1]]
+(package! poly-R)
+;; Polymode:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*MELPA Helper][MELPA Helper:1]]
+(package! package-lint)
+(package! flycheck-package)
+;; MELPA Helper:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Doom][Doom:1]]
+(package! emacs-snippets
+  :recipe (:host github
+           :repo "hlissner/emacs-snippets"
+           :files ("*")))
+;; Doom:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Standard][Standard:1]]
+(package! yasnippet-snippets
+  :recipe (:host github
+           :repo "AndreaCrotti/yasnippet-snippets"
+           :files ("*")))
+;; Standard:1 ends here
+
+;; [[file:~/.config/doom/packages.org::*Math support][Math support:1]]
+(package! cdlatex)
+;; Math support:1 ends here
